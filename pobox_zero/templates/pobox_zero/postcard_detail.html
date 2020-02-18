@@ -1,0 +1,8 @@
+{% extends 'pobox_zero/base.html' %} {% block content %}
+<h2>
+  {{ postcard.heading }}
+  <a href="#">(edit)</a>
+</h2>
+<h3>-- {{ postcard.sender.name }}</h3>
+
+{% endblock %}

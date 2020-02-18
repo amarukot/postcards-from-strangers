@@ -50,16 +50,17 @@ Sender
 
 ## Timetable
 
-| Date   | Task/Milestone | Time Alloted | Actual |
-| ------ | -------------- | ------------ | ------ |
-| Feb 17 | Documentation  | 1 hr         |        |
-|        | Wireframe      | 1 hr         |        |
-| Feb 18 | Initial Setup  |              |        |
-|        | DB, Models     | 1.5 hrs      |        |
-| Feb 19 | Reach MVP      | --           |        |
-|        | CRUD functions | 2 hrs        |        |
-| Feb 20 | Deployment     | 3 hrs        |        |
-| Feb 21 |                |              |        |
+| Date   | Task/Milestone     | Time Alloted | Actual |
+| ------ | ------------------ | ------------ | ------ |
+| Feb 17 | Documentation      | 1 hr         |        |
+|        | Wireframe          | 1 hr         |        |
+| Feb 18 | Initial Setup      |              |        |
+|        | DB, Models         | 1.5 hrs      | 2 hrs  |
+|        | Views, URLs, HTMLs | 2 hrs        |        |
+| Feb 19 | Reach MVP          | --           |        |
+|        | CRUD functions     | 2 hrs        |        |
+| Feb 20 | Deployment         | 3 hrs        |        |
+| Feb 21 |                    |              |        |
 
 ## Issues
 
