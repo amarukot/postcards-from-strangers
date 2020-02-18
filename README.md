@@ -14,10 +14,22 @@ The idea is to have a website where users can create anonymous postcards/message
 
 ## Technologies, Libraries
 
-Backend: Hasura, Apollo, GraphQL, PostgreSQL
-Frontend: React
+Backend: Hasura, Apollo, Pillow, GraphQL, PostgreSQL
+Frontend: React, Bootstrap
 
 ## Setup
+
+Install dependencies  
+`pip3 install -r requirements.txt --yes`
+
+OR
+
+`pip3 install django`  
+`pip3 install pscyopg2-binary`  
+`pip3 install Pillow`
+
+Create database
+`psql -U postgres -f settings.sql`
 
 ## Models
 
@@ -41,8 +53,10 @@ Sender
 | ------ | -------------- | ------------ | ------ |
 | Feb 17 | Documentation  | 1 hr         |        |
 |        | Wireframe      | 1 hr         |        |
-| Feb 18 | Initial Setup  | 1.5 hrs      |        |
-| Feb 19 | MVP            | --           |        |
+| Feb 18 | Initial Setup  |              |        |
+|        | DB, Models     | 1.5 hrs      |        |
+| Feb 19 | Reach MVP      | --           |        |
+|        | CRUD functions | 2 hrs        |        |
 | Feb 20 | Deployment     | 3 hrs        |        |
 | Feb 21 |                |              |        |
 
