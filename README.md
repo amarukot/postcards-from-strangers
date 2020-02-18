@@ -1,4 +1,4 @@
-# Postcards from a Stranger || PO Box Unknown
+# Postcards from a Stranger || PO Box Zero
 
 Capstone Project for GA Software Engineering Immersive Course.
 
@@ -10,7 +10,8 @@ The idea is to have a website where users can create anonymous postcards/message
 
 ## Technologies, Libraries
 
-Django, PostgreSQL,
+Backend: Hasura, Apollo, GraphQL, PostgreSQL
+Frontend: React
 
 ## Setup
 
