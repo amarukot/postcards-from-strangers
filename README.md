@@ -35,10 +35,11 @@ Create database
 
 Postcard
 
-- image
+- image_url
 - style (post MVP?)
+- heading
 - message
-- datetimestamp (?)
+- created (date/time stamp)
 - Sender (ref)
 - Recipient (optional? email? multiple?)
 
@@ -61,3 +62,12 @@ Sender
 | Feb 21 |                |              |        |
 
 ## Issues
+
+2-18-2020:  
+Error on migration of seed data.
+
+```
+django.db.utils.DataError: value too long for type character varying(100)
+```
+
+Solution: Changed length in database directly (using Postico), not through models.py because that didn't change anything.
