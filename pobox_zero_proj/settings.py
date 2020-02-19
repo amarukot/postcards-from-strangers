@@ -99,10 +99,14 @@ WSGI_APPLICATION = 'pobox_zero_proj.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'pobox_zero',
-        'USER': 'pobox_zero_user',
-        'PASSWORD': 'pobox',
-        'HOST': 'localhost',
+        # 'NAME': 'pobox_zero',
+        'NAME': 'd427j40ir4mpu3',
+        # 'USER': 'pobox_zero_user',
+        'USER': 'vfeshoieaorlor',
+        # 'PASSWORD': 'pobox',
+        'PASSWORD': 'ec88b08d7a9d09be233d56f3189a1eb371464ca7fafd22bd7ccf08fb2c45ef30',
+        # 'HOST': 'localhost',
+        'HOST': 'ec2-35-172-85-250.compute-1.amazonaws.com',
     }
 }
 
