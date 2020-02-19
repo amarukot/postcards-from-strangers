@@ -76,3 +76,5 @@ django.db.utils.DataError: value too long for type character varying(100)
 ```
 
 Solution: Changed length in database directly (using Postico), not through models.py because that didn't change anything.
+
+2-19-2020:
