@@ -57,9 +57,13 @@ Sender
 | Feb 18 | Initial Setup      |              |         |
 |        | DB, Models         | 1.5 hrs      | 2 hrs   |
 |        | Views, URLs, HTMLs | 2 hrs        | 1.5 hrs |
-| Feb 19 | Reach MVP          | --           |         |
-|        | CRUD functions     | 2 hrs        |         |
-| Feb 20 | Deployment         | 3 hrs        |         |
+|        | Bootstrap          | 2 hrs        | 3 hrs   |
+| Feb 19 | Reach MVP          |              |         |
+|        | CRUD functions     | 2 hrs        | 2.5 hrs |
+|        | Login Auth         | 2 hrs        |         |
+|        | Pillow             | 2 hrs        |         |
+| Feb 20 | Deployment         | 2 hrs        |         |
+|        | Styling            | 6 hrs        |         |
 | Feb 21 |                    |              |         |
 
 ## Issues
