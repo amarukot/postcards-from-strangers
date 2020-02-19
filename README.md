@@ -61,8 +61,7 @@ Sender
 | Feb 19 | Reach MVP          |              |         |
 |        | CRUD functions     | 2 hrs        | 2.5 hrs |
 |        | Login Auth         | 2 hrs        | 1 hr    |
-|        | Heroku deployment  | 2 hrs        |         |
-|        | Netlify deployment | 1 hrs        |         |
+|        | Heroku deployment  | 2 hrs        | 3 hrs   |
 | Feb 20 | Pillow implement   | 2 hrs        |         |
 |        | Styling            | 6 hrs        |         |
 | Feb 21 |                    |              |         |
@@ -79,3 +78,5 @@ django.db.utils.DataError: value too long for type character varying(100)
 Solution: Changed length in database directly (using Postico), not through models.py because that didn't change anything.
 
 2-19-2020:
+Trying to deploy Postgres using Heroku. Multiple issues, DEBUG=True or False?
+Ended up setting it to True, then setting the database entries in settings.py according to config vars
