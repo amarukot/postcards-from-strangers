@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pobox_zero',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [

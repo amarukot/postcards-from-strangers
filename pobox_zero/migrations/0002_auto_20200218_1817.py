@@ -13,11 +13,11 @@ def seed(apps, schema_editor):
     afriend.save()
 
     Postcard(sender=anonymous, image_url='https://images.unsplash.com/photo-1579762593217-46655e4e7efc?ixlib=rb-1.2.1&auto=format&fit=crop&w=2180&q=80', heading='first off...', message='welcome to the rest of your life.').save()
-    Postcard(sender=aldo, image_url='https://images.unsplash.com/photo-1579762593217-46655e4e7efc?ixlib=rb-1.2.1&auto=format&fit=crop&w=2180&q=80', heading='first off...', message='welcome to the rest of your life.').save()
-    Postcard(sender=afriend, image_url='https://images.unsplash.com/photo-1579762593217-46655e4e7efc?ixlib=rb-1.2.1&auto=format&fit=crop&w=2180&q=80', heading='first off...', message='welcome to the rest of your life.').save()
-    Postcard(sender=anonymous, image_url='https://images.unsplash.com/photo-1579762593217-46655e4e7efc?ixlib=rb-1.2.1&auto=format&fit=crop&w=2180&q=80', heading='first off...', message='welcome to the rest of your life.').save()
-    Postcard(sender=aldo, image_url='https://images.unsplash.com/photo-1579762593217-46655e4e7efc?ixlib=rb-1.2.1&auto=format&fit=crop&w=2180&q=80', heading='first off...', message='welcome to the rest of your life.').save()
-    Postcard(sender=anonymous, image_url='https://images.unsplash.com/photo-1579762593217-46655e4e7efc?ixlib=rb-1.2.1&auto=format&fit=crop&w=2180&q=80', heading='first off...', message='welcome to the rest of your life.').save()
+    Postcard(sender=aldo, image_url='https://images.unsplash.com/photo-1580713864169-f7f52047cde6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1656&q=80', heading='random thoughts', message='What is this?').save()
+    Postcard(sender=afriend, image_url='https://images.unsplash.com/photo-1580196969854-2f4f8d1c2b8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1602&q=80', heading='to future me', message='dont sweat the small stuff').save()
+    Postcard(sender=anonymous, image_url='https://images.unsplash.com/photo-1580196969807-cc6de06c05be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1688&q=80', heading='anyone who would listen', message='knock it off').save()
+    Postcard(sender=aldo, image_url='https://images.unsplash.com/photo-1580196969807-cc6de06c05be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1688&q=80', heading='dear stranger', message='all these shall pass').save()
+    Postcard(sender=anonymous, image_url='https://images.unsplash.com/photo-1579762593155-42faee39d0b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1602&q=80', heading='what i think', message='keep it chill').save()
 
 
 

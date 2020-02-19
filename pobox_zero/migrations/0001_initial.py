@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
             name='Postcard',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image_url', models.CharField(max_length=100, null=True)),
+                ('image_url', models.CharField(max_length=300, null=True)),
                 ('image', models.ImageField(blank=True, default='', upload_to='images')),
                 ('heading', models.CharField(default='', max_length=255)),
                 ('message', models.TextField()),

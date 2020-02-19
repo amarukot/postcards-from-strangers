@@ -1,0 +1,7 @@
+{% extends 'pobox_zero/base.html' %} {% block content %}
+<h1>New Postcard</h1>
+<form method="POST" class="">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit" class="btn btn-success">Save</button>
+</form>
+{% endblock %}

@@ -1,8 +1,20 @@
 {% extends 'pobox_zero/base.html' %} {% block content %}
-<h2>
-  {{ postcard.heading }}
-  <a href="#">(edit)</a>
-</h2>
-<h3>-- {{ postcard.sender.name }}</h3>
+<!-- Load Bootstrap -->
+{% load bootstrap4 %}
+
+<!-- Load CSS and JavaScript -->
+{% bootstrap_css %} {% bootstrap_javascript jquery='full' %}
+
+<div>
+  <div class="postcard-img ">
+    <img src="{{ postcard.image_url }}" class="inner-img img-thumbnail" />
+  </div>
+  <h2>
+    {{ postcard.heading }}
+    <a href="{% url 'postcard_edit' pk=postcard.id %}">(edit)</a>
+  </h2>
+  <p>{{ postcard.message }}</p>
+  <p>-- {{ postcard.sender.name }}</p>
+</div>
 
 {% endblock %}

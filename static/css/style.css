@@ -1,8 +1,11 @@
 .postcard-img {
   max-width: 500px;
-  border: black;
 }
 
 .inner-img {
   width: 100%;
+}
+
+.test-class {
+  font-size: 50%;
 }

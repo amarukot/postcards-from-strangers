@@ -3,11 +3,13 @@
 <h2>Postcards</h2>
 <ul>
   {% for postcard in postcards %}
-  <li>
-    <a href="{% url 'postcard_detail' pk=postcard.id %}"
-      >{{ postcard.heading }}</a
-    >
-  </li>
+  <div class="postcard-img">
+    <a href="{% url 'postcard_detail' pk=postcard.id %}">
+      <img src="{{ postcard.image_url }}" class="inner-img" />
+    </a>
+    {{ postcard.heading }}
+  </div>
+
   {% endfor %}
 </ul>
 
