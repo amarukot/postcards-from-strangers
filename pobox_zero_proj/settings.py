@@ -21,13 +21,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = ')jigfs4=&^cvkiq9c2hj-69fz)4*(7(-cea_-ngwt8)_ob5z6o'
-SECRET_KEY = os.environ.get('SECRET_KEY')
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+SECRET_KEY = ')jigfs4=&^cvkiq9c2hj-69fz)4*(7(-cea_-ngwt8)_ob5z6o'
+# SECRET_KEY = os.environ.get('SECRET_KEY')
+# EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '0.0.0.0',
@@ -94,8 +94,7 @@ WSGI_APPLICATION = 'pobox_zero_proj.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 # postgresql-curly-00581
 # DATABASE_URL='postgres://heziqgmyhwowyx:246cd3b762b17a84ba3aaf29c228c63fcb7e527aca90f702da55a1e1710bc933@ec2-184-72-236-57.compute-1.amazonaws.com:5432/dbhdslgc2hff84'
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
+
 
 DATABASES = {
     'default': {
@@ -107,6 +106,8 @@ DATABASES = {
     }
 }
 
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 
 
