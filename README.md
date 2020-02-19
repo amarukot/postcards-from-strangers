@@ -60,9 +60,10 @@ Sender
 |        | Bootstrap          | 2 hrs        | 3 hrs   |
 | Feb 19 | Reach MVP          |              |         |
 |        | CRUD functions     | 2 hrs        | 2.5 hrs |
-|        | Login Auth         | 2 hrs        |         |
-|        | Pillow             | 2 hrs        |         |
-| Feb 20 | Deployment         | 2 hrs        |         |
+|        | Login Auth         | 2 hrs        | 1 hr    |
+|        | Heroku deployment  | 2 hrs        |         |
+|        | Netlify deployment | 1 hrs        |         |
+| Feb 20 | Pillow implement   | 2 hrs        |         |
 |        | Styling            | 6 hrs        |         |
 | Feb 21 |                    |              |         |
 
