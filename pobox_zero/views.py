@@ -33,3 +33,8 @@ def postcard_edit(request, pk):
     else:
         form = PostcardForm(instance=postcard)
     return render(request, 'pobox_zero/postcard_form.html', {'form': form})
+
+
+def postcard_delete(request, pk):
+    Postcard.objects.get(id=pk).delete()
+    return redirect('/')

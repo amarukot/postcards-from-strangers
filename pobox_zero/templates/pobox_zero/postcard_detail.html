@@ -11,7 +11,8 @@
   </div>
   <h2>
     {{ postcard.heading }}
-    <a href="{% url 'postcard_edit' pk=postcard.id %}">(edit)</a>
+    <a href="{% url 'postcard_edit' pk=postcard.id %}">(edit)</a> |
+    <a href="{% url 'postcard_delete' pk=postcard.id %}">(del)</a>
   </h2>
   <p>{{ postcard.message }}</p>
   <p>-- {{ postcard.sender.name }}</p>
