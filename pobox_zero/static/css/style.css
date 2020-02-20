@@ -1,3 +1,31 @@
+.custom-brand {
+  font-family: "Dosis", sans-serif;
+}
+
+.greet-user,
+.nav-item {
+  font-family: "Source Code Pro", sans-serif;
+}
+
+.custom-msg-txt,
+.custom-h2,
+.custom-heading-txt {
+  font-family: "La Belle Aurore", cursive;
+}
+.custom-msg-txt {
+  font-size: 120%;
+}
+
+.custom-navbar {
+  background-color: #5d888d;
+}
+
+.custom-brand {
+  font-size: 200%;
+  text-decoration: none;
+  color: azure;
+}
+
 .greet-user {
   color: black;
   font-weight: 600;
@@ -7,11 +35,17 @@
 .custom-postcard-main {
   max-width: 80%;
   max-height: 800px;
+  background-color: #e7e0c5;
 }
 
 .custom-thumb {
   max-width: 400px;
-  max-height: 250px;
+  /* max-height: 250px; */
+}
+
+.custom-heading-txt {
+  font-size: 180%;
+  font-weight: 600;
 }
 
 .postcard-th {

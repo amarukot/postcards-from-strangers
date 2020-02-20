@@ -12,26 +12,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PO Box ZERO</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dosis:700|La+Belle+Aurore|Roboto+Mono|Source+Code+Pro:600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand mb-0 h1" href="/">PO Box ZERO</a>
+    <nav class="navbar sticky-top navbar-expand-sm custom-navbar navbar-dark">
+      <a class="nav-link custom-brand mb-0" href="/">PO Box ZER0 &nbsp;>> </a>
       <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button> -->
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
+        <div class="navbar-nav ml-5">
           {% if user.is_authenticated %}
-          <a class="nav-item nav-link greet-user">Hello {{ user.username }}!</a>
+          <a class="nav-item nav-link greet-user"
+            >Hello {{ user.username }}! |
+          </a>
           <a class="nav-item nav-link" href="{% url 'postcard_create' %}">
-            Write a postcard</a
-          >
+            Write a postcard |
+          </a>
           <a class="nav-item nav-link " href="{% url 'logout' %}">Log Out</a>
           {% else %}
           <a class="nav-item nav-link " href="{% url 'postcard_create' %}">
-            Write a postcard</a
-          >
-          <a class="nav-item nav-link " href="{% url 'login' %}"> Log In</a>
+            Write a postcard |
+          </a>
+          <a class="nav-item nav-link " href="{% url 'login' %}"> Log In | </a>
           <a class="nav-item nav-link " href="{% url 'signup' %}"> Sign Up</a>
           {% endif %}
         </div>

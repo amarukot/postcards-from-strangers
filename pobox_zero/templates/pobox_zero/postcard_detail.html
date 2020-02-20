@@ -5,23 +5,23 @@
 <!-- Load CSS and JavaScript -->
 {% bootstrap_css %} {% bootstrap_javascript jquery='full' %}
 
-<div class="card ml-5 mt-5 custom-postcard-main">
+<div class="card ml-5 mt-5 custom-postcard-main shadow">
   <div class="row no-gutters ">
-    <div class="col-md-6">
+    <div class="col-md-8">
       <img
         src="{{ postcard.image_url }}"
         class="card-img"
         alt="{{postcard.heading}}"
       />
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
       <div class="card-body">
-        <h5 class="card-title">
+        <h5 class="card-title custom-heading-txt">
           {{ postcard.heading }}
         </h5>
 
-        <p class="card-text">{{ postcard.message }}</p>
-        <p class="card-text">-- {{ user.username }}</p>
+        <p class="card-text custom-msg-txt">{{ postcard.message }}</p>
+        <p class="card-text custom-msg-txt">-- {{ user.username }}</p>
       </div>
       <div class="card-footer bg-transparent">
         <a
