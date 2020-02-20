@@ -14,8 +14,8 @@ The idea is to have a website where users can create anonymous postcards/message
 
 ## Technologies, Libraries
 
-Backend: Hasura, Apollo, Pillow, GraphQL, PostgreSQL
-Frontend: React, Bootstrap
+Backend: PostgreSQL, Heroku
+Frontend: Django, Python, Bootstrap
 
 ## Setup
 
@@ -63,7 +63,7 @@ Sender
 |        | Login Auth         | 2 hrs        | 1 hr    |
 |        | Heroku deployment  | 2 hrs        | 3 hrs   |
 | Feb 20 | Pillow implement   | 2 hrs        |         |
-|        | Styling            | 6 hrs        |         |
+|        | Styling            | 6 hrs        | 4 hrs   |
 | Feb 21 |                    |              |         |
 
 ## Issues
@@ -79,4 +79,4 @@ Solution: Changed length in database directly (using Postico), not through model
 
 2-19-2020:
 Trying to deploy Postgres using Heroku. Multiple issues, DEBUG=True or False?
-Ended up setting it to True, then setting the database entries in settings.py according to config vars in Heroku.
+Ended up setting it to True, then setting the database entries in settings.py according to config vars in Heroku. Once deployed, will switch back to FALSE.
