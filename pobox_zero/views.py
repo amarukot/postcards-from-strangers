@@ -23,6 +23,7 @@ def postcard_create(request):
         form = PostcardForm()
     return render(request, 'pobox_zero/postcard_form.html', {'form': form})
 
+@login_required
 def postcard_edit(request, pk):
     postcard = Postcard.objects.get(id=pk)
     if request.method == 'POST':
@@ -34,7 +35,7 @@ def postcard_edit(request, pk):
         form = PostcardForm(instance=postcard)
     return render(request, 'pobox_zero/postcard_form.html', {'form': form})
 
-
+@login_required
 def postcard_delete(request, pk):
     Postcard.objects.get(id=pk).delete()
     return redirect('/')

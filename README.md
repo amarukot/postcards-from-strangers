@@ -79,4 +79,4 @@ Solution: Changed length in database directly (using Postico), not through model
 
 2-19-2020:
 Trying to deploy Postgres using Heroku. Multiple issues, DEBUG=True or False?
-Ended up setting it to True, then setting the database entries in settings.py according to config vars
+Ended up setting it to True, then setting the database entries in settings.py according to config vars in Heroku.

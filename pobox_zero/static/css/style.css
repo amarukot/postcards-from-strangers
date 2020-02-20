@@ -1,3 +1,9 @@
+.greet-user {
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+}
+
 .postcard-img {
   max-width: 500px;
   border: black;
