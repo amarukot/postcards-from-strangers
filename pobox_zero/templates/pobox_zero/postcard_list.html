@@ -1,16 +1,21 @@
 {% extends 'pobox_zero/base.html' %} {% block content %}
+<section class="row">
+  <span class="col-2 px-5 pt-5">You found <br />a postcard...</span>
 
-<h2>Postcards</h2>
-<ul>
-  {% for postcard in postcards %}
-  <div class="postcard-img">
-    <a href="{% url 'postcard_detail' pk=postcard.id %}">
-      <img src="{{ postcard.image_url }}" class="inner-img" />
-    </a>
-    {{ postcard.heading }}
+  <div class="row col">
+    {% for postcard in postcards %}
+
+    <div class="custom-thumb m-3">
+      <a class="" href="{% url 'postcard_detail' pk=postcard.id %}">
+        <img
+          src="{{ postcard.image_url }}"
+          class="img-fluid postcard-th"
+          alt="{{ postcard.heading }}"
+        />
+      </a>
+    </div>
+    {% endfor %}
   </div>
-
-  {% endfor %}
-</ul>
+</section>
 
 {% endblock %}

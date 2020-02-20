@@ -5,17 +5,38 @@
 <!-- Load CSS and JavaScript -->
 {% bootstrap_css %} {% bootstrap_javascript jquery='full' %}
 
-<div>
-  <div class="postcard-img ">
-    <img src="{{ postcard.image_url }}" class="inner-img img-thumbnail" />
-  </div>
-  <h2>
-    {{ postcard.heading }}
-    <a href="{% url 'postcard_edit' pk=postcard.id %}">(edit)</a> |
-    <a href="{% url 'postcard_delete' pk=postcard.id %}">(del)</a>
-  </h2>
-  <p>{{ postcard.message }}</p>
-  <p>-- {{ postcard.sender.name }}</p>
-</div>
+<div class="card ml-5 mt-5 custom-postcard-main">
+  <div class="row no-gutters ">
+    <div class="col-md-6">
+      <img
+        src="{{ postcard.image_url }}"
+        class="card-img"
+        alt="{{postcard.heading}}"
+      />
+    </div>
+    <div class="col-md-6">
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ postcard.heading }}
+        </h5>
 
+        <p class="card-text">{{ postcard.message }}</p>
+        <p class="card-text">-- {{ user.username }}</p>
+      </div>
+      <div class="card-footer bg-transparent">
+        <a
+          class="btn btn-warning mb-0"
+          href="{% url 'postcard_edit' pk=postcard.id %}"
+          >edit</a
+        >
+
+        <a
+          class="btn btn-danger"
+          href="{% url 'postcard_delete' pk=postcard.id %}"
+          >delete</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
