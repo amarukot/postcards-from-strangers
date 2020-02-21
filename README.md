@@ -80,3 +80,7 @@ Solution: Changed length in database directly (using Postico), not through model
 2-19-2020:
 Trying to deploy Postgres using Heroku. Multiple issues, DEBUG=True or False?
 Ended up setting it to True, then setting the database entries in settings.py according to config vars in Heroku. Once deployed, will switch back to FALSE.
+
+2-20-2020:  
+`Invalid block tag on line 8: 'endblock'. Did you forget to register or load this tag?`  
+Solution: `{% load crispy_forms_tags %}` should be right before the `<form>` tags.
