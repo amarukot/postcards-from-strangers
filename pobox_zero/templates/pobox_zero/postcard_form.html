@@ -1,6 +1,7 @@
 {% extends 'pobox_zero/base.html' %} {% block content %}
 <div class="card mx-auto mt-5" style="width: 60%;">
   <h1 class="card-header custom-h1">New Postcard</h1>
+  <!-- using crispy_forms to style default django forms -->
   {% load crispy_forms_tags %}
   <form
     method="POST"

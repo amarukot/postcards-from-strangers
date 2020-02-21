@@ -14,21 +14,15 @@ The idea is to have a website where users can create anonymous postcards/message
 
 ## Technologies, Libraries
 
-Backend: PostgreSQL, Heroku
-Frontend: Django, Python, Bootstrap
+Backend: Python, PostgreSQL, Heroku, Pillow
+Frontend: Django, Python, Bootstrap, crispy_forms
 
 ## Setup
 
 Install dependencies  
 `pip3 install -r requirements.txt --yes`
 
-OR
-
-`pip3 install django`  
-`pip3 install pscyopg2-binary`  
-`pip3 install Pillow`
-
-Create database
+Create database (local staging)
 `psql -U postgres -f settings.sql`
 
 ## Models
@@ -43,30 +37,32 @@ Postcard
 - Sender (ref)
 - Recipient (optional? email? multiple?)
 
-Sender
+Sender (edit: not really necessary)
 
 - Name (any text)
-- Postcards - (ref) multiple
+- Postcards - (ref) multiple (edit: removed this relationship)
 
 ## Timetable
 
-| Date   | Task/Milestone     | Time Alloted | Actual  |
-| ------ | ------------------ | ------------ | ------- |
-| Feb 17 | Initial README     | 1 hr         | 1 hr    |
-|        | Wireframe          | 1 hr         | 1 hr    |
-| Feb 18 | Initial Setup      |              |         |
-|        | DB, Models         | 1.5 hrs      | 2 hrs   |
-|        | Views, URLs, HTMLs | 2 hrs        | 1.5 hrs |
-|        | Bootstrap          | 2 hrs        | 3 hrs   |
-| Feb 19 | Reach MVP          |              |         |
-|        | CRUD functions     | 2 hrs        | 2.5 hrs |
-|        | Login Auth         | 2 hrs        | 1 hr    |
-|        | Heroku deployment  | 2 hrs        | 3 hrs   |
-| Feb 20 | Styling            | 6 hrs        | 7 hrs   |
-|        | crispy_forms       | 2 hrs        | 1 hr    |
-| Feb 21 | Pillow implement   | 3 hrs        | 1.5 hrs |
-|        | carousel image     | 2 hrs        | 1 hr    |
-|        | more styling       | 1 hr         | 1 hr    |
+| Date   | Task/Milestone     | Time Alloted | Actual   |
+| ------ | ------------------ | ------------ | -------- |
+| Feb 17 | Initial README     | 1 hr         | 1 hr     |
+|        | Wireframe          | 1 hr         | 1 hr     |
+| Feb 18 | Initial Setup      |              |          |
+|        | DB, Models         | 1.5 hrs      | 2 hrs    |
+|        | Views, URLs, HTMLs | 2 hrs        | 1.5 hrs  |
+|        | Bootstrap          | 2 hrs        | 3 hrs    |
+| Feb 19 | Reach MVP          |              |          |
+|        | CRUD functions     | 2 hrs        | 2.5 hrs  |
+|        | Login Auth         | 2 hrs        | 1 hr     |
+|        | Heroku deployment  | 2 hrs        | 3 hrs    |
+| Feb 20 | Styling            | 6 hrs        | 7 hrs    |
+|        | crispy_forms       | 2 hrs        | 1 hr     |
+| Feb 21 | Pillow implement   | 3 hrs        | 1.5 hrs  |
+|        | carousel image     | 2 hrs        | 1 hr     |
+|        | more styling       | 1 hr         | 1 hr     |
+|        | clean up code      | 1 hr         | 1 hr     |
+| TOTAL  | TOTAL              | 28.5 hrs     | 28.5 hrs |
 
 ## Issues
 

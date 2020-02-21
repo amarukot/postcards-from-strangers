@@ -1,8 +1,8 @@
 {% extends 'pobox_zero/base.html' %} {% block content %}
 <section class="">
   {% if postcards %}
-  <!-- <h2 class="px-5 pt-5 custom-h2 text-center">Pick a postcard...</h2> -->
   <div id="carousel" class="carousel slide w-60 mx-auto" data-ride="carousel">
+    <!-- Initial image for carousel. Needed to make one 'active' for the slides to work.  -->
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img
@@ -11,6 +11,9 @@
           alt="..."
         />
       </div>
+      <!-- END initial image. -->
+
+      <!-- loading postcards in database -->
       {% for postcard in postcards %}
       <div class="carousel-item">
         <a class="" href="{% url 'postcard_detail' pk=postcard.id %}">
@@ -24,12 +27,18 @@
           </div>
         </a>
       </div>
-      {% endfor %} {% else %}
+      {% endfor %}
+      <!-- END loading postcards -->
+
+      {% else %}
+      <!-- if no postcards created... -->
       <h2 class="px-5 pt-5 custom-h2">
         There aren't any postcards yet. Create the first one?
       </h2>
       {% endif %}
     </div>
+
+    <!-- carousel controls -->
     <a
       class="carousel-control-prev"
       href="#carousel"
@@ -48,12 +57,13 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+    <!-- END carousel controls -->
   </div>
 </section>
 
 {% endblock %}
 
-<!--  card style display, in case you want to revert to this.  -->
+<!--  Below is the masonry-style display, in case you want to revert to this.  -->
 <!-- Just place it between the 'for' tags -->
 <!-- 
     <div class="custom-thumb card shadow">

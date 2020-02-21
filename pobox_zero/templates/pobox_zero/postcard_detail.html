@@ -1,9 +1,4 @@
 {% extends 'pobox_zero/base.html' %} {% block content %}
-<!-- Load Bootstrap -->
-{% load bootstrap4 %}
-
-<!-- Load CSS and JavaScript -->
-{% bootstrap_css %} {% bootstrap_javascript jquery='full' %}
 
 <div class="card ml-5 mt-5 custom-postcard-main shadow">
   <div class="row no-gutters ">
@@ -21,8 +16,6 @@
         </h5>
 
         <p class="card-text custom-msg-txt">{{ postcard.message }}</p>
-        <!-- <p class="card-text custom-msg-txt">-- {{ user.username }}</p> -->
-        <!-- I think I'd rather the user to be the one addressed to by the message regardless of who's logged in... -->
       </div>
       <div class="card-footer bg-transparent">
         <a

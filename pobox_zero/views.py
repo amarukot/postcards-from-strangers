@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from .models import Postcard, Sender
 from .forms import PostcardForm
 from django.contrib.auth.decorators import login_required
-# from django.http import JsonResponse
 
 
 def postcard_list(request):

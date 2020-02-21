@@ -8,5 +8,4 @@ urlpatterns = [
     path('accounts/logout/', auth_views.LogoutView.as_view(
         template_name='accounts/logout.html'), name='logout'),
     path('accounts/signup', views.sign_up, name='signup'),
-    # path('oauth/', include('social_django.urls', namespace='social')),
 ]
