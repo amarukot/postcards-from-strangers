@@ -12,7 +12,7 @@ class Postcard(models.Model):
     heading = models.CharField(default='', max_length=255)
     message = models.TextField()
     created = models.DateTimeField(auto_now=True)
-    sender = models.ForeignKey(Sender, on_delete=models.CASCADE, related_name='postcards')
+    # sender = models.ForeignKey(Sender, on_delete=models.CASCADE, related_name='postcards')
 
 
     def __str__(self):
