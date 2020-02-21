@@ -1,11 +1,63 @@
 {% extends 'pobox_zero/base.html' %} {% block content %}
-<section class="mt-3">
+<section class="">
   {% if postcards %}
-  <h2 class="px-5 pt-5 custom-h2 text-center">Pick a postcard...</h2>
-  <div class="card-columns mx-auto" style="width: 80%;">
-    {% for postcard in postcards %}
+  <!-- <h2 class="px-5 pt-5 custom-h2 text-center">Pick a postcard...</h2> -->
+  <div id="carousel" class="carousel slide w-60 mx-auto" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="media/images/carousel-default.png"
+          class="d-block w-100"
+          alt="..."
+        />
+      </div>
+      {% for postcard in postcards %}
+      <div class="carousel-item">
+        <a class="" href="{% url 'postcard_detail' pk=postcard.id %}">
+          <img
+            src="{{ postcard.image.url }}"
+            class="img-fluid postcard-th"
+            alt="{{ postcard.heading }}"
+          />
+          <div class="custom-carousel-caption d-non d-md-block mt-1">
+            <span class="custom-caption">{{ postcard.heading }}</span>
+          </div>
+        </a>
+      </div>
+      {% endfor %} {% else %}
+      <h2 class="px-5 pt-5 custom-h2">
+        There aren't any postcards yet. Create the first one?
+      </h2>
+      {% endif %}
+    </div>
+    <a
+      class="carousel-control-prev"
+      href="#carousel"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#carousel"
+      role="button"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</section>
+
+{% endblock %}
+
+<!--  card style display, in case you want to revert to this.  -->
+<!-- Just place it between the 'for' tags -->
+<!-- 
     <div class="custom-thumb card shadow">
-      <a class="" href="{% url 'postcard_detail' pk=postcard.id %}">
+      <a class="" href="{ % url 'postcard_detail' pk=postcard.id % }">
         <img
           src="{{ postcard.image.url }}"
           class="img-fluid postcard-th"
@@ -13,12 +65,4 @@
         />
       </a>
     </div>
-    {% endfor %} {% else %}
-    <h2 class="px-5 pt-5 custom-h2">
-      There aren't any postcards yet. Create the first one?
-    </h2>
-    {% endif %}
-  </div>
-</section>
-
-{% endblock %}
+ -->

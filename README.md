@@ -65,7 +65,7 @@ Sender
 | Feb 20 | Styling            | 6 hrs        | 7 hrs   |
 |        | crispy_forms       | 2 hrs        | 1 hr    |
 | Feb 21 | Pillow implement   | 3 hrs        | 1.5 hrs |
-|        | carousel image     | 2 hrs        |         |
+|        | carousel image     | 2 hrs        | 1 hr    |
 |        | more styling       | 1 hr         | 1 hr    |
 
 ## Issues

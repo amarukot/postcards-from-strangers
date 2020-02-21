@@ -11,9 +11,11 @@
 
 .custom-msg-txt,
 .custom-h2,
-.custom-heading-txt {
+.custom-heading-txt,
+.custom-caption {
   font-family: "La Belle Aurore", cursive;
 }
+
 .custom-msg-txt {
   font-size: 120%;
 }
@@ -74,4 +76,16 @@
 
 .inner-img {
   width: 100%;
+}
+
+.custom-carousel-caption {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+
+.custom-caption {
+  font-size: 300%;
+  color: white;
+  text-shadow: 2px 4px 10px black;
 }
