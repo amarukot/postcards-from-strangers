@@ -1,8 +1,17 @@
 {% extends 'pobox_zero/base.html' %} {% block content %}
 
-<form method="post" action="{% url 'signup' %}">
-  {% csrf_token %} {{ form.as_p }}
-  <input type="submit" value="Sign Up" />
-  <input type="hidden" name="next" value="{{ next }}" />
-</form>
+<div class="card mx-auto mt-5" style="width: 60%;">
+  <h1 class="card-header custom-h1">Sign Up</h1>
+  {% load crispy_forms_tags %}
+  <form
+    method="post"
+    action="{% url 'signup' %}"
+    class="card-body"
+    style="margin-left: 5%;"
+  >
+    {% csrf_token %} {{ form|crispy }}
+    <input type="submit" value="Sign Up" />
+    <input type="hidden" name="next" value="{{ next }}" />
+  </form>
+</div>
 {% endblock %}

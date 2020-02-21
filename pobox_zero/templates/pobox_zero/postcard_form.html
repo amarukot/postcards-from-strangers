@@ -1,6 +1,6 @@
 {% extends 'pobox_zero/base.html' %} {% block content %}
 <div class="card mx-auto mt-5" style="width: 60%;">
-  <h1 class="card-header custom-h2">New Postcard</h1>
+  <h1 class="card-header custom-h1">New Postcard</h1>
   {% load crispy_forms_tags %}
   <form
     method="POST"
@@ -9,8 +9,14 @@
     style="margin-left: 5%;"
   >
     {% csrf_token %}
-    <!-- {{ form|crispy }} -->
-    {{ form.heading|as_crispy_field }} {{ form.message|as_crispy_field }}
+    <!-- wrapped the fields below in divs since some 
+      fields get treated as text if not wrapped. -->
+    <div>
+      {{ form.heading|as_crispy_field }}
+    </div>
+    <div>
+      {{ form.message|as_crispy_field }}
+    </div>
     <div>
       {{ form.image|as_crispy_field }}
     </div>
