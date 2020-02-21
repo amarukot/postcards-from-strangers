@@ -62,9 +62,9 @@ Sender
 |        | CRUD functions     | 2 hrs        | 2.5 hrs |
 |        | Login Auth         | 2 hrs        | 1 hr    |
 |        | Heroku deployment  | 2 hrs        | 3 hrs   |
-| Feb 20 | Pillow implement   | 2 hrs        |         |
-|        | Styling            | 6 hrs        | 4 hrs   |
-| Feb 21 |                    |              |         |
+| Feb 20 | Styling            | 6 hrs        | 7 hrs   |
+|        | crispy_forms       | 2 hrs        | 1 hr    |
+| Feb 21 | Pillow implement   | 3 hrs        |         |
 
 ## Issues
 
