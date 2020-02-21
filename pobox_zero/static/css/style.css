@@ -63,29 +63,20 @@
   object-fit: contain;
 }
 
-/* .postcard-img {
-  max-width: 500px;
-  border: black;
-} */
-
 .custom-card-img {
   width: 100%;
   object-fit: fill;
   background-color: #e7e0c5;
 }
 
-.inner-img {
-  width: 100%;
-}
-
 .custom-carousel-caption {
   position: absolute;
-  top: 50px;
-  left: 100px;
+  top: 5vh;
+  left: 5vw;
 }
 
 .custom-caption {
-  font-size: 300%;
+  font-size: 6vw;
   color: white;
   text-shadow: 2px 4px 10px black;
 }
