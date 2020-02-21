@@ -1,4 +1,4 @@
-{% extends 'pobox_zero/base.html' %} {% block content %}
+{% extends 'pobox_zero/base.html' %} {% load static %} {% block content %}
 <section class="">
   {% if postcards %}
   <div id="carousel" class="carousel slide w-60 mx-auto" data-ride="carousel">
@@ -6,9 +6,9 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img
-          src="media/images/carousel-default.png"
+          src="{% static 'media/images/carousel-default.png' %}"
           class="d-block w-100"
-          alt="..."
+          alt="Pick a postcard..."
         />
       </div>
       <!-- END initial image. -->
