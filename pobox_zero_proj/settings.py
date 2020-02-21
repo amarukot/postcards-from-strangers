@@ -27,7 +27,7 @@ SECRET_KEY = ')jigfs4=&^cvkiq9c2hj-69fz)4*(7(-cea_-ngwt8)_ob5z6o'
 # EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '0.0.0.0',
@@ -43,7 +43,8 @@ LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [   
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -53,7 +54,6 @@ INSTALLED_APPS = [
     'pobox_zero',
     'bootstrap4',
     'accounts',
-    'whitenoise.runserver_nostatic',
     'crispy_forms',
 ]
 
