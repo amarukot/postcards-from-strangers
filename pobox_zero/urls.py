@@ -10,6 +10,5 @@ urlpatterns = [
     path('postcard/create', views.postcard_create, name='postcard_create'),
     path('postcard/edit/<int:pk>', views.postcard_edit, name='postcard_edit'),
     path('postcard/delete/<int:pk>', views.postcard_delete, name='postcard_delete'),
-]
-# ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # To display the images from static/ media folder

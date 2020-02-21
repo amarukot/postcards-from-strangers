@@ -1,20 +1,23 @@
 {% extends 'pobox_zero/base.html' %} {% block content %}
 <section class="mt-3">
+  {% if postcards %}
   <h2 class="px-5 pt-5 custom-h2">Pick a postcard...</h2>
-
   <div class="card-columns mx-auto" style="width: 80%;">
     {% for postcard in postcards %}
-
     <div class="custom-thumb card shadow">
       <a class="" href="{% url 'postcard_detail' pk=postcard.id %}">
         <img
-          src="{{ postcard.image_url }}"
+          src="{{ postcard.image.url }}"
           class="img-fluid postcard-th"
           alt="{{ postcard.heading }}"
         />
       </a>
     </div>
-    {% endfor %}
+    {% endfor %} {% else %}
+    <h2 class="px-5 pt-5 custom-h2">
+      There aren't any postcards yet. Create the first one?
+    </h2>
+    {% endif %}
   </div>
 </section>
 

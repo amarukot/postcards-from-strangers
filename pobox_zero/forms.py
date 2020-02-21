@@ -4,5 +4,5 @@ from .models import Postcard, Sender
 class PostcardForm(forms.ModelForm):
     class Meta:
         model = Postcard
-        fields = ('image_url', 'heading', 'message',)
+        fields = ('heading', 'message','image')
 

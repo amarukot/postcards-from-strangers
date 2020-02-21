@@ -13,9 +13,10 @@ def postcard_detail(request, pk):
     postcard = Postcard.objects.get(id=pk)
     return render(request, 'pobox_zero/postcard_detail.html', {'postcard': postcard})
 
+@login_required
 def postcard_create(request):
     if request.method == 'POST':
-        form = PostcardForm(request.POST)
+        form = PostcardForm(request.POST, request.FILES)
         if form.is_valid():
             postcard = form.save()
             return redirect('postcard_detail', pk=postcard.id)
@@ -27,7 +28,7 @@ def postcard_create(request):
 def postcard_edit(request, pk):
     postcard = Postcard.objects.get(id=pk)
     if request.method == 'POST':
-        form = PostcardForm(request.POST, instance=postcard)
+        form = PostcardForm(request.POST, request.FILES, instance=postcard)
         if form.is_valid():
             postcard = form.save()
             return redirect('postcard_detail', pk=postcard.id)
