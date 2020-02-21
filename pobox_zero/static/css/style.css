@@ -80,3 +80,9 @@
   color: white;
   text-shadow: 2px 4px 10px black;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+}

@@ -20,6 +20,7 @@
           <img
             src="{{ postcard.image.url }}"
             class="img-fluid postcard-th"
+            style=""
             alt="{{ postcard.heading }}"
           />
           <div class="custom-carousel-caption d-non d-md-block mt-1">
@@ -45,7 +46,11 @@
       role="button"
       data-slide="prev"
     >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span
+        id="prev"
+        class="carousel-control-prev-icon"
+        aria-hidden="true"
+      ></span>
       <span class="sr-only">Previous</span>
     </a>
     <a
