@@ -54,7 +54,11 @@ INSTALLED_APPS = [
     'bootstrap4',
     'accounts',
     'whitenoise.runserver_nostatic',
+    'crispy_forms',
 ]
+
+# added for crispy-forms
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -99,13 +103,13 @@ WSGI_APPLICATION = 'pobox_zero_proj.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME': 'pobox_zero',
+        # 'NAME': 'pobox_zero',  <-- local db info
         'NAME': 'd427j40ir4mpu3',
-        # 'USER': 'pobox_zero_user',
+        # 'USER': 'pobox_zero_user',  <-- local db info
         'USER': 'vfeshoieaorlor',
-        # 'PASSWORD': 'pobox',
+        # 'PASSWORD': 'pobox',  <-- local db info
         'PASSWORD': 'ec88b08d7a9d09be233d56f3189a1eb371464ca7fafd22bd7ccf08fb2c45ef30',
-        # 'HOST': 'localhost',
+        # 'HOST': 'localhost',  <-- local db info
         'HOST': 'ec2-35-172-85-250.compute-1.amazonaws.com',
     }
 }
@@ -115,7 +119,7 @@ DATABASES['default'].update(db_from_env)
 
 
 
-# Password validation
+# Password validation - might need in future iteration
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -156,6 +160,6 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 MEDIA_URL ='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR, 'static', 'media')
 
-# Configure Django App for Heroku.
+# Configure Django App for Heroku. -- keep and try if any issues with redeployment.
 # import django_heroku
 # django_heroku.settings(locals())
