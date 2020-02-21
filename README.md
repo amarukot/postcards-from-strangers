@@ -91,3 +91,6 @@ Solution: `{% load crispy_forms_tags %}` should be right before the `<form>` tag
 Images were not loading if `DEBUG=False` in settings.py.
 
 Tried `python3 manage.py collectstatic` to put all static files into STATIC_ROOT. Didn't work.
+
+Tried to add a key/value entry in Heroku config vars for MEDIA_URL.
+Didn't work either.
