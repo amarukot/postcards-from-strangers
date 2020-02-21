@@ -13,7 +13,7 @@ class Postcard(models.Model):
     message = models.TextField()
     created = models.DateTimeField(auto_now=True)
     # sender = models.ForeignKey(Sender, on_delete=models.CASCADE, related_name='postcards')
-
+    # removed this relationship, believe it should be anonymous as per User Stories
 
     def __str__(self):
         return self.heading

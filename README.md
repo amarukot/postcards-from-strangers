@@ -85,3 +85,6 @@ Ended up setting it to True, then setting the database entries in settings.py ac
 2-20-2020:  
 `Invalid block tag on line 8: 'endblock'. Did you forget to register or load this tag?`  
 Solution: `{% load crispy_forms_tags %}` should be right before the `<form>` tags.
+
+2-21-2020:  
+Images were not loading if `DEBUG=False` in settings.py.
