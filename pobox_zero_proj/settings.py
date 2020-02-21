@@ -27,7 +27,7 @@ SECRET_KEY = ')jigfs4=&^cvkiq9c2hj-69fz)4*(7(-cea_-ngwt8)_ob5z6o'
 # EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '0.0.0.0',
