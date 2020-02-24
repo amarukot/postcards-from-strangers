@@ -11,7 +11,10 @@ def postcard_list(request):
 
 def postcard_detail(request, pk):
     postcard = Postcard.objects.get(id=pk)
-    return render(request, 'pobox_zero/postcard_detail.html', {'postcard': postcard})
+    is_fave = False
+    if postcard.favorited_by.filter(id=request.user.id).exists():
+        is_fave = True
+    return render(request, 'pobox_zero/postcard_detail.html', {'postcard': postcard, 'is_fave': is_fave})
 
 @login_required
 def postcard_create(request):
@@ -42,8 +45,16 @@ def postcard_delete(request, pk):
     return redirect('/')
 
 @login_required
-def postcard_addtofave(request, pk):
+def postcard_favorite(request, pk):
     user = request.user
     postcard = Postcard.objects.get(id=pk)
-    fav = Favorite.objects.create(user, postcard)
-    return redirect('/')
+    is_fave = False
+    # fav = Favorite.objects.create(user, postcard)
+
+    if postcard.favorited_by.filter(id=request.user.id).exists():
+        postcard.favorited_by.remove(user)
+        is_fave = False
+    else:
+        postcard.favorited_by.add(user)
+        is_fave = True
+    return render(request, 'pobox_zero/postcard_detail.html', {'postcard': postcard, 'is_fave': is_fave })
