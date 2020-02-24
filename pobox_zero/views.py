@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Postcard, Sender
 from .forms import PostcardForm
+from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
 
@@ -38,4 +39,11 @@ def postcard_edit(request, pk):
 @login_required
 def postcard_delete(request, pk):
     Postcard.objects.get(id=pk).delete()
+    return redirect('/')
+
+@login_required
+def postcard_addtofave(request, pk):
+    user = request.user
+    postcard = Postcard.objects.get(id=pk)
+    fav = Favorite.objects.create(user, postcard)
     return redirect('/')

@@ -63,8 +63,9 @@ Create database (local staging)
 |        | carousel image     | 2 hrs        | 1 hr     |
 |        | more styling       | 1 hr         | 1 hr     |
 |        | clean up code      | 1 hr         | 0.5 hr   |
-|        | Misc bug fixes     | 3 hrs        | 1.5 hrs  |
+|        | Misc bug fixes     | 3 hrs        | 3.5 hrs  |
 | Feb 24 | add footer         | 1 hr         |          |
+|        | add favorites      | 3 hrs        |          |
 | Feb 25 |                    |              |          |
 | TOTAL  | TOTAL              | 34 hrs       | 29.5 hrs |
 

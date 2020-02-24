@@ -19,6 +19,11 @@
       </div>
       <div class="card-footer bg-transparent">
         <a
+          class="btn btn-sm btn-success"
+          href="{% url 'postcard_addtofave' pk=postcard.id %}"
+          >{{user.username}}</a
+        >
+        <a
           class="btn btn-sm btn-warning mb-0"
           href="{% url 'postcard_edit' pk=postcard.id %}"
           >edit</a
