@@ -64,8 +64,8 @@ Create database (local staging)
 |        | more styling       | 1 hr         | 1 hr     |
 |        | clean up code      | 1 hr         | 0.5 hr   |
 |        | Misc bug fixes     | 3 hrs        | 3.5 hrs  |
-| Feb 24 | add footer         | 1 hr         |          |
-|        | add favorites      | 3 hrs        |          |
+| Feb 24 | add favorites      | 3 hr         | 4 hrs    |
+|        | add footer         | 1 hr         |          |
 | Feb 25 |                    |              |          |
 | TOTAL  | TOTAL              | 34 hrs       | 29.5 hrs |
 
