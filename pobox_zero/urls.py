@@ -17,3 +17,6 @@ urlpatterns = [
 # to display the images from static/ media folder
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+# OR
+# if settings.DEBUG:
+#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

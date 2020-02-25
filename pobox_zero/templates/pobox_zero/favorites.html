@@ -1,6 +1,6 @@
 {% extends 'pobox_zero/base.html' %} {% load static %} {% block content %}
 <section>
-  {% if user.is_authenticated %} {% for fave in faves %}
+  {% if faves %} {% for fave in faves %}
 
   <div class="custom-thumb card shadow">
     <a class="" href="{% url 'postcard_detail' pk=fave.id %}">
@@ -15,7 +15,11 @@
     </a>
   </div>
   {% endfor %} {% else %}
-  <div>You have not favorited any postcard.</div>
+  <div>
+    <h2 class="custom-h2 mt-5 text-center" style="height: 85vh;">
+      You have not favorited any postcards yet.
+    </h2>
+  </div>
   {% endif %}
 </section>
 {% endblock %}
