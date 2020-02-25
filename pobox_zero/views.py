@@ -25,6 +25,7 @@ def postcard_detail(request, pk):
 def postcard_create(request):
     if request.method == 'POST':
         form = PostcardForm(request.POST, request.FILES)
+        form.instance.author = request.user
         if form.is_valid():
             postcard = form.save()
             return redirect('postcard_detail', pk=postcard.id)

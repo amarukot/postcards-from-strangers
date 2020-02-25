@@ -1,28 +1,30 @@
 {% extends 'pobox_zero/base.html' %} {% block content %}
-<div class="card mx-auto mt-5" style="width: 60%;">
-  <h1 class="card-header custom-h1">New Postcard</h1>
-  <!-- using crispy_forms to style default django forms -->
-  {% load crispy_forms_tags %}
-  <form
-    method="POST"
-    enctype="multipart/form-data"
-    class="card-body"
-    style="margin-left: 5%;"
-  >
-    {% csrf_token %}
-    <!-- wrapped the fields below in divs since some 
+<section class="pt-5">
+  <div class="card mx-auto" style="width: 60%;">
+    <h1 class="card-header custom-h1">New Postcard</h1>
+    <!-- using crispy_forms to style default django forms -->
+    {% load crispy_forms_tags %}
+    <form
+      method="POST"
+      enctype="multipart/form-data"
+      class="card-body"
+      style="margin-left: 5%;"
+    >
+      {% csrf_token %}
+      <!-- wrapped the fields below in divs since some 
       fields get treated as text if not wrapped. -->
-    <div>
-      {{ form.heading|as_crispy_field }}
-    </div>
-    <div>
-      {{ form.message|as_crispy_field }}
-    </div>
-    <div>
-      {{ form.image|as_crispy_field }}
-    </div>
+      <div>
+        {{ form.heading|as_crispy_field }}
+      </div>
+      <div>
+        {{ form.message|as_crispy_field }}
+      </div>
+      <div>
+        {{ form.image|as_crispy_field }}
+      </div>
 
-    <button type="submit" class="btn btn-success">Save</button>
-  </form>
-</div>
+      <button type="submit" class="btn btn-success">Save</button>
+    </form>
+  </div>
+</section>
 {% endblock %}
