@@ -16,7 +16,7 @@ class Postcard(models.Model):
     message         = models.TextField()
     created         = models.DateTimeField(auto_now=True)
     favorited_by    = models.ManyToManyField(User, related_name='favorited_by', blank=True)
-    author          = models.ForeignKey(User, on_delete=models.CASCADE, related_name='postcards', null=True)
+    author          = models.ForeignKey(User, on_delete=models.CASCADE, related_name='postcards')
 
 
     # sender = models.ForeignKey(Sender, on_delete=models.CASCADE, related_name='postcards')
