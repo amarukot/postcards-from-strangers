@@ -1,7 +1,8 @@
 {% extends 'pobox_zero/base.html' %} {% block content %}
-
-<div class="card mx-auto mt-5" style="width: 60%;">
-  <h1 class="card-header custom-h1">You have logged out.</h1>
-  <a href="{% url 'login' %}">Click here to login again.</a>
-</div>
+<section class="pt-5">
+  <div class="card mx-auto" style="width: 60%;">
+    <h1 class="card-header custom-h1">You have logged out.</h1>
+    <a class="my-5 ml-3" href="{% url 'login' %}">Click here to login again.</a>
+  </div>
+</section>
 {% endblock %}
