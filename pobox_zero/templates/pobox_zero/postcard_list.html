@@ -20,11 +20,11 @@
         <a class="" href="{% url 'postcard_detail' pk=postcard.id %}">
           <img
             src="{{ postcard.image.url }}"
-            class="img-fluid postcard-th"
+            class="img-fluid postcard-th d-block mx-auto"
             style=""
             alt="{{ postcard.heading }}"
           />
-          <div class="custom-carousel-caption d-none d-md-block mt-1">
+          <div class="carousel-caption d-none d-md-block mt-1">
             <span class="custom-caption">{{ postcard.heading }}</span>
           </div>
         </a>

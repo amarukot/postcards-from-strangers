@@ -67,9 +67,10 @@ Create database (local staging)
 | Feb 24    | add favorites           | 3 hr         | 4 hrs   |
 |           | misc styling            | 1 hr         | 1.5 hr  |
 |           | view favorites          | 2 hrs        | 3 hrs   |
-| Feb 25    | profile page            | 2 hrs        |         |
-| Feb 19-25 | deploy with DEBUG=False | 6 hrs        |         |
-| TOTAL     | TOTAL                   | 47 hrs       | 39 hrs  |
+| Feb 25    | profile page            | 2 hrs        | 1 hr    |
+|           | more styling tweaks     | 1 hr         | 2 hr    |
+| Feb 19-25 | deploy with DEBUG=False | 6 hrs        | 7~ hrs  |
+| TOTAL     | TOTAL                   | 48 hrs       | 49~ hrs |
 
 ## Issues
 

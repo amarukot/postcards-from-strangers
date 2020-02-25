@@ -22,55 +22,55 @@
     ></script>
   </head>
   <body>
-    <main
-      style="background-image: linear-gradient(to top, rgba(251,185,40,0), rgba(251,185,40,.5));"
+    <nav
+      class="navbar sticky-top navbar-expand-md custom-navbar navbar-light border-bottom border-dark"
     >
-      <nav
-        class="navbar sticky-top navbar-expand-md custom-navbar navbar-light border-bottom border-dark"
+      <a class="nav-link custom-brand mb-0" href="/">PO Box ZER0 &nbsp;>> </a>
+      <!-- responsive toggle to hamburger icon -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
       >
-        <a class="nav-link custom-brand mb-0" href="/">PO Box ZER0 &nbsp;>> </a>
-        <!-- responsive toggle to hamburger icon -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <!-- nav bar items -->
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ml-auto">
-            {% if user.is_authenticated %}
-            <a class="nav-item nav-link greet-user"
-              >Hello {{ user.username }}!
-            </a>
-            <a class="nav-item nav-link" href="{% url 'postcard_create' %}">
-              – Write a postcard
-            </a>
-            <a class="nav-item nav-link" href="{% url 'favorites' %}">
-              - <i class="fas fa-star"></i> Your Favorites
-            </a>
-            <a class="nav-item nav-link " href="{% url 'logout' %}">– LogOut</a>
-            {% else %}
-            <a class="nav-item nav-link " href="{% url 'postcard_create' %}">
-              – Write a postcard
-            </a>
-            <a class="nav-item nav-link " href="{% url 'login' %}">
-              – LogIn
-            </a>
-            <a class="nav-item nav-link " href="{% url 'signup' %}">
-              – SignUp</a
-            >
-            {% endif %}
-          </div>
+      <!-- nav bar items -->
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          {% if user.is_authenticated %}
+          <a
+            class="nav-item nav-link greet-user"
+            href="{% url 'edit_profile' %}"
+            >Hello {{ user.username }}!
+          </a>
+          <a class="nav-item nav-link" href="{% url 'postcard_create' %}">
+            – Write a postcard
+          </a>
+          <a class="nav-item nav-link" href="{% url 'favorites' %}">
+            - <i class="fas fa-star"></i> Your Favorites
+          </a>
+          <a class="nav-item nav-link " href="{% url 'logout' %}">– LogOut</a>
+          {% else %}
+          <a class="nav-item nav-link " href="{% url 'postcard_create' %}">
+            – Write a postcard
+          </a>
+          <a class="nav-item nav-link " href="{% url 'login' %}">
+            – LogIn
+          </a>
+          <a class="nav-item nav-link " href="{% url 'signup' %}"> – SignUp</a>
+          {% endif %}
         </div>
-      </nav>
-
+      </div>
+    </nav>
+    <main
+      class="my-auto"
+      style="background-image: linear-gradient(to top, rgba(251,185,40,0), rgba(251,185,40,.5)); height: 85vh;"
+    >
       {% block content %} {% endblock %}
     </main>
     <footer class="footer">

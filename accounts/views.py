@@ -3,6 +3,9 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from .models import Profile
 from .forms import UserEditForm, ProfileEditForm
+from django.contrib.auth.decorators import login_required
+
+
 
 def sign_up(request):
     if request.method == 'POST':
@@ -16,3 +19,14 @@ def sign_up(request):
         form = UserCreationForm()
     return render(request, 'accounts/signup.html', {'form': form})
 
+@login_required
+def edit_profile(request):
+    user = request.user
+    if request.method == 'POST':
+        form = UserEditForm(request.POST, request.FILES, instance=user)
+        if form.is_valid():
+            form.save()
+    else: 
+        form = UserEditForm(instance=user)
+
+    return render(request, 'accounts/edit_profile.html', {'form': form})

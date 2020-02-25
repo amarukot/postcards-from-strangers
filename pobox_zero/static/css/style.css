@@ -24,6 +24,7 @@ a {
 
 .custom-navbar {
   background-color: #fbb92a;
+  height: 10vh;
 }
 
 .custom-brand {
@@ -79,10 +80,8 @@ a {
   height: 90vh;
 }
 
-.custom-carousel-caption {
-  position: absolute;
-  top: 5vh;
-  left: 5vw;
+.carousel-caption {
+  top: 2vh;
 }
 
 .custom-caption {
