@@ -3,20 +3,22 @@
 {% endif %} {% if next %}
 <p>Please login to see this page.</p>
 {% endif %}
-<div class="card mx-auto mt-5" style="width: 60%;">
-  <h1 class="card-header custom-h1">Login</h1>
+<section style="height: 85vh;">
+  <div class="card mx-auto mt-5" style="width: 60%;">
+    <h1 class="card-header custom-h1">Login</h1>
 
-  {% load crispy_forms_tags %}
-  <form
-    method="post"
-    action="{% url 'login' %}"
-    class="card-body"
-    style="margin-left: 5%;"
-  >
-    {% csrf_token %} {{ form|crispy }}
-    <input type="submit" value="login" />
-    <input type="hidden" name="next" value="{{ next }}" />
-  </form>
-  <br />
-</div>
+    {% load crispy_forms_tags %}
+    <form
+      method="post"
+      action="{% url 'login' %}"
+      class="card-body"
+      style="margin-left: 5%;"
+    >
+      {% csrf_token %} {{ form|crispy }}
+      <input type="submit" value="login" />
+      <input type="hidden" name="next" value="{{ next }}" />
+    </form>
+    <br />
+  </div>
+</section>
 {% endblock %}

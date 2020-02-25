@@ -45,31 +45,31 @@ Create database (local staging)
 
 ## Timetable
 
-| Date      | Task/Milestone          | Time Alloted | Actual   |
-| --------- | ----------------------- | ------------ | -------- |
-| Feb 17    | Initial README          | 1 hr         | 1 hr     |
-|           | Wireframe               | 1 hr         | 1 hr     |
-| Feb 18    | Initial Setup           |              |          |
-|           | DB, Models              | 2 hrs        | 2 hrs    |
-|           | Views, URLs, HTMLs      | 2 hrs        | 1.5 hrs  |
-|           | Bootstrap               | 2 hrs        | 3 hrs    |
-| Feb 19    | Reach MVP               |              |          |
-|           | CRUD functions          | 3 hrs        | 2.5 hrs  |
-|           | Login Auth              | 2 hrs        | 1 hr     |
-|           | Heroku deployment       | 2 hrs        | 3 hrs    |
-| Feb 20    | Styling                 | 6 hrs        | 7 hrs    |
-|           | crispy_forms            | 2 hrs        | 1 hr     |
-| Feb 21    | Pillow implement        | 3 hrs        | 1.5 hrs  |
-|           | carousel image          | 2 hrs        | 1 hr     |
-|           | more styling            | 1 hr         | 1 hr     |
-|           | clean up code           | 1 hr         | 0.5 hr   |
-|           | Misc bug fixes          | 3 hrs        | 3.5 hrs  |
-| Feb 24    | add favorites           | 3 hr         | 4 hrs    |
-|           | add footer              | 1 hr         |          |
-|           | view favorites          | 2 hrs        |          |
-| Feb 25    | profile page            | 2 hrs        |          |
-| Feb 19-25 | deploy with DEBUG=False | 6 hrs        |          |
-| TOTAL     | TOTAL                   | 47 hrs       | 34.5 hrs |
+| Date      | Task/Milestone          | Time Alloted | Actual  |
+| --------- | ----------------------- | ------------ | ------- |
+| Feb 17    | Initial README          | 1 hr         | 1 hr    |
+|           | Wireframe               | 1 hr         | 1 hr    |
+| Feb 18    | Initial Setup           |              |         |
+|           | DB, Models              | 2 hrs        | 2 hrs   |
+|           | Views, URLs, HTMLs      | 2 hrs        | 1.5 hrs |
+|           | Bootstrap               | 2 hrs        | 3 hrs   |
+| Feb 19    | Reach MVP               |              |         |
+|           | CRUD functions          | 3 hrs        | 2.5 hrs |
+|           | Login Auth              | 2 hrs        | 1 hr    |
+|           | Heroku deployment       | 2 hrs        | 3 hrs   |
+| Feb 20    | Styling                 | 6 hrs        | 7 hrs   |
+|           | crispy_forms            | 2 hrs        | 1 hr    |
+| Feb 21    | Pillow implement        | 3 hrs        | 1.5 hrs |
+|           | carousel image          | 2 hrs        | 1 hr    |
+|           | more styling            | 1 hr         | 1 hr    |
+|           | clean up code           | 1 hr         | 0.5 hr  |
+|           | Misc bug fixes          | 3 hrs        | 3.5 hrs |
+| Feb 24    | add favorites           | 3 hr         | 4 hrs   |
+|           | misc styling            | 1 hr         | 1.5 hr  |
+|           | view favorites          | 2 hrs        | 3 hrs   |
+| Feb 25    | profile page            | 2 hrs        |         |
+| Feb 19-25 | deploy with DEBUG=False | 6 hrs        |         |
+| TOTAL     | TOTAL                   | 47 hrs       | 39 hrs  |
 
 ## Issues
 

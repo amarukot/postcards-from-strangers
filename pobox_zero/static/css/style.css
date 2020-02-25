@@ -5,14 +5,16 @@
 
 .greet-user,
 .nav-item,
-.btn {
+.btn,
+a {
   font-family: "Source Code Pro", sans-serif;
 }
 
 .custom-msg-txt,
 .custom-h2,
 .custom-heading-txt,
-.custom-caption {
+.custom-caption,
+.custom-caption-sm {
   font-family: "La Belle Aurore", cursive;
 }
 
@@ -43,6 +45,12 @@
   overflow: auto;
 }
 
+.custom-card-detail-img {
+  max-width: 100%;
+  object-fit: cover;
+  background-color: #e7e0c5;
+}
+
 /* .custom-postcard-right {
   overflow: auto;
 } */
@@ -63,15 +71,12 @@
   object-fit: contain;
   padding: 0 auto;
 } */
-
+.carousel-section {
+  height: 80vh;
+}
 .carousel-inner {
   margin: auto;
   height: 90vh;
-}
-.custom-card-detail-img {
-  width: 100%;
-  object-fit: fill;
-  background-color: #e7e0c5;
 }
 
 .custom-carousel-caption {
@@ -86,6 +91,17 @@
   text-shadow: 2px 4px 10px black;
 }
 
+.custom-caption-sm {
+  display: block;
+  font-size: large;
+  color: white;
+  text-shadow: 2px 4px 10px black;
+}
+
+.custom-caption-sm:hover {
+  display: block;
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   height: 100px;
@@ -97,10 +113,15 @@
   bottom: 45%;
 }
 
+.favorites {
+}
+
 .footer-text {
   font-family: "Source Code Pro", sans-serif;
+  font-size: 2vh;
 }
 
 .footer {
   background-color: #efda7b;
+  text-align: center;
 }

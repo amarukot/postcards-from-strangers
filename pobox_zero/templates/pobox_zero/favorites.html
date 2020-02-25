@@ -1,0 +1,21 @@
+{% extends 'pobox_zero/base.html' %} {% load static %} {% block content %}
+<section>
+  {% if user.is_authenticated %} {% for fave in faves %}
+
+  <div class="custom-thumb card shadow">
+    <a class="" href="{% url 'postcard_detail' pk=fave.id %}">
+      <img
+        src="{{ fave.image.url }}"
+        class="img-fluid postcard-th"
+        alt="{{ fave.heading }}"
+      />
+      <div class="card-img-overlay">
+        <span class="custom-caption-sm">{{ fave.heading }}</span>
+      </div>
+    </a>
+  </div>
+  {% endfor %} {% else %}
+  <div>You have not favorited any postcard.</div>
+  {% endif %}
+</section>
+{% endblock %}

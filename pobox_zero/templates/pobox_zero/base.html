@@ -16,6 +16,10 @@
       href="https://fonts.googleapis.com/css?family=Dosis:700|La+Belle+Aurore|Roboto+Mono|Source+Code+Pro:600&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/b0143965dd.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <main
@@ -48,6 +52,9 @@
             <a class="nav-item nav-link" href="{% url 'postcard_create' %}">
               – Write a postcard
             </a>
+            <a class="nav-item nav-link" href="{% url 'favorites' %}">
+              - <i class="fas fa-star"></i> Your Favorites
+            </a>
             <a class="nav-item nav-link " href="{% url 'logout' %}">– LogOut</a>
             {% else %}
             <a class="nav-item nav-link " href="{% url 'postcard_create' %}">
@@ -67,12 +74,10 @@
       {% block content %} {% endblock %}
     </main>
     <footer class="footer">
-      <div class="container">
+      <div class="container pt-2">
         <span class="text-muted footer-text"
-          >by Aldo Marukot |
-          <a href="https://www.linkedin.com/in/aldomarukot/"
-            >www.linkedin.com/in/aldomarukot/</a
-          >
+          >by
+          <a href="https://www.linkedin.com/in/aldomarukot/">Aldo Marukot</a>
           | Copyright 2020</span
         >
       </div>

@@ -9,6 +9,11 @@ def postcard_list(request):
     postcards = Postcard.objects.all()
     return render(request, 'pobox_zero/postcard_list.html', {'postcards': postcards})
 
+@login_required
+def favorites(request):
+    faves = request.user.favorited_by.all()
+    return render(request, 'pobox_zero/favorites.html', {'faves': faves})
+
 def postcard_detail(request, pk):
     postcard = Postcard.objects.get(id=pk)
     is_fave = False

@@ -1,55 +1,39 @@
 {% extends 'pobox_zero/base.html' %} {% block content %}
-
-<div class="card mt-5 mx-auto custom-postcard-main shadow">
-  <div class="row no-gutters ">
-    <div class="col-md-8">
-      <img
-        src="{{ postcard.image.url }}"
-        class="custom-card-detail-img"
-        alt="{{postcard.heading}}"
-      />
-    </div>
-    <div class="col-md-4 ">
-      <div class="card-body">
-        <h5 class="card-title custom-heading-txt">
-          {{ postcard.heading }}
-        </h5>
-
-        <p class="card-text custom-msg-txt">{{ postcard.message }}</p>
+<section style="height: 85vh;">
+  <div class="card mt-5 mx-auto custom-postcard-main shadow">
+    <div class="row no-gutters ">
+      <div class="col-md-8">
+        <img
+          src="{{ postcard.image.url }}"
+          class="custom-card-detail-img"
+          alt="{{postcard.heading}}"
+        />
       </div>
-      <div class="card-footer bg-transparent">
-        <!-- <a
-          class="btn btn-sm btn-success"
-          href="{ % url 'postcard_addtofave' pk=postcard.id %}"
-          >add to faves</a
-        > -->
+      <div class="col-md-4 ">
+        <div class="card-body">
+          <h5 class="card-title custom-heading-txt">
+            {{ postcard.heading }}
+          </h5>
+
+          <p class="card-text custom-msg-txt">{{ postcard.message }}</p>
+        </div>
+        <hr />
+        {% if user.is_authenticated %}
+
         <!-- Favorite/Unfavorite -->
-        <div>
-          <form
-            action="{% url 'postcard_favorite' pk=postcard.id %}"
-            method="POST"
-          >
-            {% csrf_token %} {% if is_fave %}
-            <button
-              type="submit"
-              name="postcard_id"
-              value="{{ postcard.id }}"
-              class="btn btn-sm btn-warning mb-0"
-            >
-              unfavorite
-            </button>
-            {% else %}
-            <button
-              type="submit"
-              name="postcard_id"
-              value="{{ postcard.id }}"
-              class="btn btn-sm btn-success mb-0"
-            >
-              favorite
-            </button>
-            {% endif %}
-          </form>
+        <div class="favorites mb-1 card-body">
+          {% csrf_token %} {% if is_fave %}
+          <a href="{% url 'postcard_favorite' pk=postcard.id %}">
+            <i class="fas fa-star fa-lg"></i> Un-favorite
+          </a>
+          {% else %}
+          <a href="{% url 'postcard_favorite' pk=postcard.id %}">
+            <i class="far fa-star fa-lg"></i> Favorite
+          </a>
+          {% endif %}
           <!--  -->
+        </div>
+        <div class="edit-delete mb-0 card-footer bg-transparent">
           <a
             class="btn btn-sm btn-warning mb-0"
             href="{% url 'postcard_edit' pk=postcard.id %}"
@@ -61,8 +45,9 @@
             >delete</a
           >
         </div>
+        {% endif %}
       </div>
     </div>
   </div>
-</div>
+</section>
 {% endblock %}
