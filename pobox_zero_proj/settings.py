@@ -43,7 +43,7 @@ LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
-INSTALLED_APPS = [   
+INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'accounts',
     'crispy_forms',
+    'storages',
 ]
 
 # added for crispy-forms
@@ -120,7 +121,6 @@ db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
 
 
-
 # Password validation - might need in future iteration
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -158,15 +158,26 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Extra places for collectstatic to find static files
 # STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'))
 
 
-MEDIA_URL ='/media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
 
 # Configure Django App for Heroku. -- keep and try if any issues with redeployment.
 # import django_heroku
 # django_heroku.settings(locals())
+
+
+# AWS config
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+S3_BUCKET_NAME = os.environ.get('S3_BUCKET_NAME')
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
