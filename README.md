@@ -98,3 +98,7 @@ Tried `python3 manage.py collectstatic` to put all static files into STATIC_ROOT
 
 Tried to add a key/value entry in Heroku config vars for MEDIA_URL.
 Didn't work either.
+
+3-17-2020:  
+Resumed working on this project, trying to implement file storage using AWS S3.  
+Followed a tutorial and was having trouble deploying to Heroku. Turns out it was just a matter of updating `requirements.txt`.
