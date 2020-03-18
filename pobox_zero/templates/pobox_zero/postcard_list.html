@@ -7,7 +7,7 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img
-          src="{% static 'media/images/carousel-default.png' %}"
+          src="{% static 'images/carousel-default.png' %}"
           class="img-fluid postcard-th"
           alt="Pick a postcard..."
         />
@@ -20,7 +20,8 @@
         <a class="" href="{% url 'postcard_detail' pk=postcard.id %}">
           <img
             src="{{ postcard.image.url }}"
-            class="img-fluid postcard-th d-block mx-auto"
+            class="img-fluid
+          postcard-th d-block mx-auto"
             style=""
             alt="{{ postcard.heading }}"
           />
