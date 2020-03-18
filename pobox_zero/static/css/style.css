@@ -124,5 +124,6 @@ a {
 
 .footer {
   /* background-color: #efda7b; */
+  border-top: 2px solid #efda7b;
   text-align: center;
 }
