@@ -94,8 +94,6 @@ WSGI_APPLICATION = 'pobox_zero_proj.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-# postgresql-curly-00581
-# DATABASE_URL='postgres://heziqgmyhwowyx:246cd3b762b17a84ba3aaf29c228c63fcb7e527aca90f702da55a1e1710bc933@ec2-184-72-236-57.compute-1.amazonaws.com:5432/dbhdslgc2hff84'
 
 
 DATABASES = {
