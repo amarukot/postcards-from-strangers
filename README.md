@@ -102,3 +102,13 @@ Didn't work either.
 3-17-2020:  
 Resumed working on this project, trying to implement file storage using AWS S3.  
 Followed a tutorial and was having trouble deploying to Heroku. Turns out it was just a matter of updating `requirements.txt`.
+
+3-18-2020:  
+Deploying to Heroku, using AWS, and setting DEBUG=False causes so much confusion. Honestly, it's working now, but I've done so much fiddling around that I am not 100% what the solution was. Basically it has definitely something to do with the location of static files, media files, etc.
+
+3-19-2020:  
+Well, image uploaded through web app properly gets uploaded to AWS S3 but trying to display the image is not working {{ postcard.image.url }} should work properly, but it's not pointing to the right URL. I think the AWS region has something to do with it.
+
+Added line in settings.py for `AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME` which seems to remove the sensitive data on the URL for the file.
+
+I then hardcoded the region into the AWS_S3_CUSTOM_DOMAIN like so `AWS_S3_CUSTOM_DOMAIN = '%s.s3.us-east-2.amazonaws.com' % AWS_STORAGE_BUCKET_NAME`. This looks like it works... at least it shows the older files already uploaded. Will continue testing on recently uploaded files.
