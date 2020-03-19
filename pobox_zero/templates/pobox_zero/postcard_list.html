@@ -19,7 +19,7 @@
       <div class="carousel-item">
         <a class="" href="{% url 'postcard_detail' pk=postcard.id %}">
           <img
-            src="static/{{ postcard.image.url }}"
+            src="{{ postcard.image.url }}"
             class="img-fluid
           postcard-th d-block mx-auto"
             style=""
