@@ -12,7 +12,7 @@ class Sender(models.Model):
 
 class Postcard(models.Model):
     image_url = models.TextField(null=True, max_length=300)
-    image = models.ImageField(default='', upload_to='images', blank=True)
+    image = models.ImageField(default='default.png', upload_to='images')
     heading = models.CharField(default='', max_length=255)
     message = models.TextField()
     created = models.DateTimeField(auto_now=True)
