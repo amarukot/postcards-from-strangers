@@ -108,3 +108,5 @@ dmypy.json
 .pyre/
 # pytype static type analyzer
 .pytype/
+
+settings.ini
