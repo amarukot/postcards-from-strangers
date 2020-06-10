@@ -54,26 +54,33 @@
           <a class="nav-item nav-link" href="{% url 'favorites' %}">
             - <i class="fas fa-star"></i> Your Favorites
           </a>
-          <a class="nav-item nav-link " href="{% url 'logout' %}">– LogOut</a>
+          <a class="nav-item nav-link" href="{% url 'logout' %}">– LogOut</a>
           {% else %}
-          <a class="nav-item nav-link " href="{% url 'postcard_create' %}">
+          <a class="nav-item nav-link" href="{% url 'postcard_create' %}">
             – Write a postcard
           </a>
-          <a class="nav-item nav-link " href="{% url 'login' %}">
+          <a class="nav-item nav-link" href="{% url 'login' %}">
             – LogIn
           </a>
-          <a class="nav-item nav-link " href="{% url 'signup' %}"> – SignUp</a>
+          <a class="nav-item nav-link" href="{% url 'signup' %}"> – SignUp</a>
           {% endif %}
         </div>
       </div>
     </nav>
     <main
       class="h-100"
-      style="background-image: linear-gradient(to top, rgba(251,185,40,0), rgba(251,185,40,.5)); height: 85vh;"
+      style="
+        background-image: linear-gradient(
+          to top,
+          rgba(251, 185, 40, 0),
+          rgba(251, 185, 40, 0.5)
+        );
+        height: 85vh;
+      "
     >
       {% block content %} {% endblock %}
     </main>
-    <footer class="footer pt-3 sticky-bottom">
+    <footer class="footer py-auto sticky-bottom">
       <div class="container pt-2">
         <span class="text-muted footer-text"
           >by
