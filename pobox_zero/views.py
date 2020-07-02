@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Postcard, Sender
+from .models import Postcard
 from .forms import PostcardForm
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
@@ -9,10 +9,12 @@ def postcard_list(request):
     postcards = Postcard.objects.all()
     return render(request, 'pobox_zero/postcard_list.html', {'postcards': postcards})
 
+
 @login_required
 def favorites(request):
     faves = request.user.favorited_by.all()
     return render(request, 'pobox_zero/favorites.html', {'faves': faves})
+
 
 def postcard_detail(request, pk):
     postcard = Postcard.objects.get(id=pk)
@@ -20,6 +22,7 @@ def postcard_detail(request, pk):
     if postcard.favorited_by.filter(id=request.user.id).exists():
         is_fave = True
     return render(request, 'pobox_zero/postcard_detail.html', {'postcard': postcard, 'is_fave': is_fave})
+
 
 @login_required
 def postcard_create(request):
@@ -33,6 +36,7 @@ def postcard_create(request):
         form = PostcardForm()
     return render(request, 'pobox_zero/postcard_form.html', {'form': form})
 
+
 @login_required
 def postcard_edit(request, pk):
     postcard = Postcard.objects.get(id=pk)
@@ -45,10 +49,12 @@ def postcard_edit(request, pk):
         form = PostcardForm(instance=postcard)
     return render(request, 'pobox_zero/postcard_form.html', {'form': form})
 
+
 @login_required
 def postcard_delete(request, pk):
     Postcard.objects.get(id=pk).delete()
     return redirect('/')
+
 
 @login_required
 def postcard_favorite(request, pk):
@@ -63,4 +69,4 @@ def postcard_favorite(request, pk):
     else:
         postcard.favorited_by.add(user)
         is_fave = True
-    return render(request, 'pobox_zero/postcard_detail.html', {'postcard': postcard, 'is_fave': is_fave })
+    return render(request, 'pobox_zero/postcard_detail.html', {'postcard': postcard, 'is_fave': is_fave})
