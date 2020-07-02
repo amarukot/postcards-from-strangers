@@ -104,7 +104,9 @@ Didn't work either.</details>
 <details><summary>3-17-2020:  </summary>
 
 Resumed working on this project, trying to implement file storage using AWS S3.  
-Followed a tutorial and was having trouble deploying to Heroku. Turns out it was just a matter of updating `requirements.txt`. </details>
+Followed a tutorial and was having trouble deploying to Heroku. Turns out it was just a matter of updating `requirements.txt`.
+
+</details>
 
 <details><summary>3-18-2020:  </summary>
 
@@ -123,4 +125,9 @@ Took a little break from working on this.
 At this point, images are being uploaded to AWS S3 properly. Images are also being displayed...but not after you set the file permission in S3 to public. So what happens is that once a user uploads a photo, the image is not displayed.  
 I changed the setting of `AWS_DEFAULT_ACL` to `public-read` so that once an image is uploaded, it can be displayed as well. Not sure what the flaws of this approach is, but I only set the public-read permission on files that were uploaded, not on anything else stored on the AWS S3 bucket. I think this app is ok as far as functionality for now. Next would be to clean up the CSS styling a bit more. Specifically, image sizing, footer placement, and responsiveness. Stay tuned.
 
+</details>
+
+<details>
+<summary>7-2-2020: </summary>
+Removed Sender model. Not gonna use it.
 </details>

@@ -11,7 +11,7 @@ from django.contrib.auth.models import User
 
 
 class Postcard(models.Model):
-    image_url = models.TextField(null=True, max_length=300)
+    image_url = models.TextField(null=True, max_length=300)  # not used
     image = models.ImageField(
         default='carousel-default.png', upload_to='images')
     heading = models.CharField(default='', max_length=255)
