@@ -79,7 +79,7 @@ a {
 }
 .carousel-inner {
   margin: auto;
-  height: 90vh;
+  height: 100vh;
 }
 
 .carousel-caption {
@@ -105,6 +105,7 @@ a {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
+  /* default size was too small */
   height: 100px;
   width: 100px;
 }
@@ -112,7 +113,7 @@ a {
 .carousel-control-prev,
 .carousel-control-next {
   /* set position of icons relative to page */
-  /* default is 50%, middle of screen horizontally */
+  /* default is middle of screen horizontally */
   /* bottom: 40%; */
 }
 
