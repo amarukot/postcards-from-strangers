@@ -112,7 +112,8 @@ a {
 .carousel-control-prev,
 .carousel-control-next {
   /* set position of icons relative to page */
-  bottom: 75%;
+  /* default is 50%, middle of screen horizontally */
+  bottom: 40%;
 }
 
 .favorites {
