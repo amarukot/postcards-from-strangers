@@ -1,7 +1,5 @@
 # Postcards from a Stranger || PO Box Zero
 
-Capstone Project for GA Software Engineering Immersive Course.
-
 The idea is to have a website where visitors can pick a random postcard and browse through strangers' letters, notes, messages, etc. Visitors can also sign up as users so that they can create anonymous postcards/messages/letters to anyone or no one in particular. These postcards could have any message – inspiration, rants, words of advice, or just anything really. I wanted to keep the sender anonymous so that they can be free to express themselves. I also wanted the 'recipients' to not know the senders to make the messages have more meaning to them and interpret them according to their situation.
 
 ## User Stories
