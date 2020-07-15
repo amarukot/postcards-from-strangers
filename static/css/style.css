@@ -111,7 +111,8 @@ a {
 
 .carousel-control-prev,
 .carousel-control-next {
-  bottom: 45%;
+  /* set position of icons relative to page */
+  bottom: 75%;
 }
 
 .favorites {
