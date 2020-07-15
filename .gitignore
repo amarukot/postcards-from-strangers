@@ -110,3 +110,6 @@ dmypy.json
 .pytype/
 
 settings.ini
+
+# VS Code workspace
+.code-workspace
