@@ -124,6 +124,6 @@ a {
 
 .footer {
   background-color: #efda7b;
-  border-top: 2px solid black;
+  border-top: thin solid slategray;
   text-align: center;
 }
