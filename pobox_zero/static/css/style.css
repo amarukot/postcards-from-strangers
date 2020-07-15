@@ -122,8 +122,9 @@ a {
   font-size: 2vh;
 }
 
+// this isn't getting applied to the page...
 .footer {
   background-color: #efda7b;
-  border-top: 10px solid red;
+  border-top: 2px solid #ffffff;
   text-align: center;
 }

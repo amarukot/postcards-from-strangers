@@ -123,7 +123,7 @@ a {
 }
 
 .footer {
-  /* background-color: #efda7b; */
-  border-top: 2px solid #efda7b;
+  background-color: #efda7b;
+  border-top: 2px solid black;
   text-align: center;
 }
