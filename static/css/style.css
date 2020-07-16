@@ -28,7 +28,8 @@ a {
 
 /* NAVBAR */
 .custom-navbar {
-  background-color: #fbb92a;
+  /* background-color: #fbb92a; */
+  background-color: rgba(251, 185, 40, 0.2);
   /* height: 10vh; */
 }
 
