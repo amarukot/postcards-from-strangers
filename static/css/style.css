@@ -21,7 +21,7 @@ a {
 .custom-msg-txt {
   font-size: 120%;
   overflow: scroll;
-  /* height: 200px; */
+  min-height: 200px;
 }
 
 .custom-navbar {
