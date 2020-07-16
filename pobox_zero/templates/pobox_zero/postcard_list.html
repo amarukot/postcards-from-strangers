@@ -16,7 +16,7 @@
 
       <!-- loading postcards in database -->
       {% for postcard in postcards %}
-      <div class="carousel-item">
+      <div class="carousel-item pt-5">
         <a class="" href="{% url 'postcard_detail' pk=postcard.id %}">
           <img
             src="{{ postcard.image.url }}"
