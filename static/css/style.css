@@ -106,6 +106,12 @@ a {
   overflow: auto;
 }
 
+#postcard-left {
+}
+
+#postcard-right {
+}
+
 .custom-card-detail-img {
   max-width: 100%;
   object-fit: cover;
