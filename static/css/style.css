@@ -26,11 +26,10 @@ a {
   font-family: "La Belle Aurore", cursive;
 }
 
-/* NAVBAR */
+/* ----- NAVBAR ----- */
 .custom-navbar {
   /* background-color: #fbb92a; */
   background-color: rgba(251, 185, 40, 0.2);
-  /* height: 10vh; */
 }
 
 .custom-brand {
@@ -44,7 +43,52 @@ a {
   font-weight: 600;
   text-decoration: none;
 }
-/* END NAVBAR */
+/* ----- END NAVBAR ----- */
+
+/* ----- CAROUSEL ----- */
+.carousel-section {
+  height: 80vh;
+}
+.carousel-inner {
+  margin: auto;
+  height: 100vh;
+}
+
+.carousel-caption {
+  top: 4vh;
+}
+
+.custom-caption {
+  font-size: 4vw;
+  color: white;
+  text-shadow: 2px 4px 10px black;
+}
+
+.custom-caption-sm {
+  display: block;
+  font-size: large;
+  color: white;
+  text-shadow: 2px 4px 10px black;
+}
+
+.custom-caption-sm:hover {
+  display: block;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  /* default size was too small */
+  height: 100px;
+  width: 100px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  /* set position of icons relative to page */
+  /* default is middle of screen horizontally */
+  /* bottom: 40%; */
+}
+/* END CAROUSEL */
 
 /* POSTCARD DETAIL */
 .custom-postcard-main {
@@ -81,51 +125,6 @@ a {
 }
 
 /* END POSTCARD DETAIL */
-
-/* CAROUSEL */
-.carousel-section {
-  height: 80vh;
-}
-.carousel-inner {
-  margin: auto;
-  height: 100vh;
-}
-
-.carousel-caption {
-  top: 2vh;
-}
-
-.custom-caption {
-  font-size: 4vw;
-  color: white;
-  text-shadow: 2px 4px 10px black;
-}
-
-.custom-caption-sm {
-  display: block;
-  font-size: large;
-  color: white;
-  text-shadow: 2px 4px 10px black;
-}
-
-.custom-caption-sm:hover {
-  display: block;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  /* default size was too small */
-  height: 100px;
-  width: 100px;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  /* set position of icons relative to page */
-  /* default is middle of screen horizontally */
-  /* bottom: 40%; */
-}
-/* END CAROUSEL */
 
 .favorites {
 }
