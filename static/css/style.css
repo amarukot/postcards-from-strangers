@@ -92,6 +92,10 @@ a {
   /* default is middle of screen horizontally */
   /* bottom: 40%; */
 }
+
+.carousel-item {
+  width: 100%;
+}
 /* END CAROUSEL */
 
 /* POSTCARD DETAIL */
