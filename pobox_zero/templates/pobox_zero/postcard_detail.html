@@ -1,15 +1,15 @@
 {% extends 'pobox_zero/base.html' %} {% block content %}
 <section class="pt-5">
   <div class="card mx-auto custom-postcard-main shadow">
-    <div class="row no-gutters ">
-      <div class="col-md-8">
+    <div class="row no-gutters">
+      <div id="postcard-left" class="col-md-8">
         <img
           src="{{ postcard.image.url }}"
-          class="custom-card-detail-img"
+          class="custom-card-detail-img w-100"
           alt="{{ postcard.heading }}"
         />
       </div>
-      <div class="col-md-4 ">
+      <div id="postcard-right" class="col-md-4">
         <div class="card-body">
           <h5 class="card-title custom-heading-txt">
             {{ postcard.heading }}

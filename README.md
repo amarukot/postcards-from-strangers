@@ -129,3 +129,9 @@ I changed the setting of `AWS_DEFAULT_ACL` to `public-read` so that once an imag
 <summary>7-2-2020: </summary>
 Removed Sender model. Not gonna use it.
 </details>
+
+<details>
+<summary>7-16-2020: </summary>
+Issue with weird margin/padding on right and bottom post message body.
+
+</details>
